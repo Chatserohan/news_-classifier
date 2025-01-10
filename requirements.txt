@@ -29,7 +29,7 @@ click==8.1.7
 collection==0.1.6
 colorama==0.4.3
 comm==0.2.2
-command-not-found==0.3
+
 contourpy==1.1.1
 cryptography==2.8
 cupshelpers==1.0
