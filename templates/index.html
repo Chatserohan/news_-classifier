@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1> VeriNews</h1>
+            <p>Enter text to check if it's real or fake news</p>
+        </header>
+        
+        <div class="form-container">
+            <form method="POST">
+                <textarea name="user_text" placeholder="Enter news text here..." rows="8" cols="60" required></textarea>
+                <br>
+                <button type="submit" class="submit-btn">Predict <i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Prediction: <span class="{{ 'fake' if prediction == 'Fake' else 'real' }}">{{ prediction }}</span></h2>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Blog Section -->
+    <div class="blog-section">
+        <h2>How to Use This Website</h2>
+        <p>
+            Welcome to the VeriNews! This tool allows you to quickly determine whether a given piece of news text is real or fake.
+        </p>
+        <p>
+            To use this website, simply follow these easy steps:
+        </p>
+        <ol>
+            <li><strong>Enter Text:</strong> Paste or type the news article or any piece of text you want to classify into the provided text box.</li>
+            <li><strong>Click "Predict":</strong> Once you've entered the text, click the "Predict" button to get the result.</li>
+            <li><strong>View Prediction:</strong> The website will analyze the text and predict whether it is "Real" or "Fake" based on the trained model.</li>
+        </ol>
+        <p>
+            Our Fake News Classifier uses machine learning to analyze news articles and identify common characteristics of fake or misleading news. Please note that while this tool is quite accurate, it is still a work in progress and might not be perfect.
+        </p>
+        <p>
+            Keep in mind that while we strive for accuracy, no tool is foolproof. Always double-check critical information from trusted sources before forming any conclusions.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rohan Chatse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

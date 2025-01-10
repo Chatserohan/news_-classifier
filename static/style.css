@@ -1,0 +1,256 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f2f3f5, #e0e7ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body fills the screen */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 20px;
+}
+
+.main-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-container:hover {
+    transform: scale(1.03);
+}
+
+/* Header */
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    /* margin-top: 10px; */
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+/* Form */
+.form-container {
+    margin-bottom: 40px;
+}
+
+textarea {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fafafa;
+    color: #555;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+}
+
+button.submit-btn {
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #2980b9;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.5);
+}
+
+button.submit-btn i {
+    margin-left: 8px;
+}
+
+/* Result */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #dfe6e9;
+    background: #f7f9fc;
+    transition: background-color 0.3s ease;
+}
+
+.result h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.real {
+    color: #27ae60;
+    font-weight: bold;
+    background: rgba(39, 174, 96, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.fake {
+    color: #e74c3c;
+    font-weight: bold;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Blog Section */
+.blog-section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    width: 100%;
+    padding: 40px;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.blog-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-section h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.blog-section p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.blog-section ol {
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+.blog-section ol li {
+    margin-bottom: 15px;
+}
+
+.blog-section ol li::marker {
+    color: #3498db; /* Blue bullet for steps */
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Ensure the footer stays at the bottom of the page */
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .blog-section {
+        padding: 30px;
+    }
+
+    .blog-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .blog-section ol li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .blog-section {
+        padding: 20px;
+    }
+}
